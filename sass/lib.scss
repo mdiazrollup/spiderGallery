@@ -1,0 +1,65 @@
+/*****
+*** Basic colors 
+******/
+$font-stack:    Helvetica, sans-serif;
+$primary-color: #3e2a6b;
+$black:#000;
+$white:#fff;
+$yellow: #ffcb0e;
+$yellow-orange: #bca41e;
+$orange:#be5730;
+$wrapper-width: 505px;
+$overlay-color: rgba(0, 0, 0, 0.8);
+$shadow-color:rgba(0, 0, 0, 0.5);
+
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+ }
+
+/*****
+*** Basic  mixins 
+******/
+@mixin box-shadow($top, $left, $blur, $color, $inset: false) {
+  @if $inset {
+    -webkit-box-shadow:inset $top $left $blur $color;
+    -moz-box-shadow:inset $top $left $blur $color;
+    box-shadow:inset $top $left $blur $color;
+  } @else {
+    -webkit-box-shadow: $top $left $blur $color;
+    -moz-box-shadow: $top $left $blur $color;
+    box-shadow: $top $left $blur $color;
+  }
+}
+@mixin box-shadow($top, $left, $blur, $color, $inset: false) {
+  @if $inset {
+    -webkit-box-shadow:inset $top $left $blur $color;
+    -moz-box-shadow:inset $top $left $blur $color;
+    box-shadow:inset $top $left $blur $color;
+  } @else {
+    -webkit-box-shadow: $top $left $blur $color;
+    -moz-box-shadow: $top $left $blur $color;
+    box-shadow: $top $left $blur $color;
+  }
+}
+@mixin box-sizing($sizing) {
+	box-sizing: $sizing;
+	-moz-box-sizing: $sizing;
+	-webkit-box-sizing: $sizing;
+}
+@mixin cursor-pointer {
+	cursor:pointer;
+	cursor:finger;
+}
+@mixin transform($value){
+	-webkit-transform: $value;
+    -moz-transform: $value;
+    -ms-transform: $value;
+    -o-transform: $value;
+    -ie-transform:$value;
+    transform: $value;
+}
